@@ -1,7 +1,7 @@
 export const schema = {
 	"type": "object",
 	"properties": {
-	  "users": {
+		"users": {
 			"type": "array",
 			"minItems": 3,
 			"maxItems": 5,
@@ -28,7 +28,7 @@ export const schema = {
 				},
 				"required": ["id", "firstName", "lastName", "email"]
 			}
-	  }
+		}
 	},
 	"required": ["users"]
   };
