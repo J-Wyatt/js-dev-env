@@ -1,6 +1,6 @@
 import path from 'path';
 import webpack from 'webpack';
-import HtmlWebpackplugin from 'html-webpack-plugin';
+import htmlWebpackPlugin from 'html-webpack-plugin';
 import WebpackMd5Hash from 'webpack-md5-hash';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
@@ -33,7 +33,7 @@ export default {
 			name: 'vendor'
 		}),
 		//Create HTML file that includes reference to bundled JS
-		new HtmlWebpackplugin({
+		new htmlWebpackPlugin({
 			template: 'src/index.html',
 			inject: true,
 			minify: {
@@ -46,7 +46,10 @@ export default {
 				keepClosingSlash: true,
 				minifyJS: true,
 				minifyCSS: true,
-				minifyURLs: true
+				minifyURLs: true,
+				// Properties you define here are available in index.html
+				// using htmkWebpackPlugin.option.varName
+				trackJSToken: 'the token theyd give me if I signed up'
 			}
 		}),
 		// Eliminate duplicate packages when generating bundle
