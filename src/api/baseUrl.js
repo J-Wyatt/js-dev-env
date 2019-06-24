@@ -1,5 +1,5 @@
 export default function getBaseUrl() {
-	return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3001/' : '/';
+	return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3001/' : 'https://warm-refuge-25404.herokuapp.com/';
 }
 
 function getQueryStringParameterByName(name, url) {//necessary for getting a parameter from URL. He got it from StackOverflow
